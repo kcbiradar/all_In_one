@@ -1,0 +1,13 @@
+{% extends 'app/layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Add an new Quote </h1>
+
+        <form action="{% url 'addQuote' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}

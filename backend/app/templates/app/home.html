@@ -1,17 +1,47 @@
 {% extends 'app/layout.html' %}
 
+{% load static %}
+
 {% block body %}
     <h1>Wel come to ForYou.com</h1>
     <div class="container">        
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row">
+            <div class="card col" style="width: 18rem;">
+                 <!-- <img src="https://imgs.search.brave.com/m56xzW_fK-tE4cm0Alj9uCyxbXQJqMvdmfNKA8eBYxY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ybHYu/emNhY2hlLmNvLnVr/L3RydW1wX2lzX2Ff/am9rZV9hbnRpX3Ry/dW1wX3Byb3BhZ2Fu/ZGFfYmFubmVyLXI0/MzYyMjM0MzY0ZmM0/NjliODU2YWFjOGMw/NjkyZGVkZF9qajdo/el8zMDcuanBnP3Js/dm5ldD0x" class="card-img-top" alt="img"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Jokes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'jokes' %}" class="btn btn-primary">Read</a>
+                    <!-- I have to create the form for joke submission -->
+                    <a href="{% url 'addJoke' %}" class="btn btn-success">Add a joke</a>
+                </div>
             </div>
         </div>
+        <br><br>
+        <div class="row">
+            <div class="card col" style="width: 18rem;">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title"> Articles </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'articles' %}" class="btn btn-primary">Read</a>
+                    <a href="{% url 'addArticle' %}" class="btn btn-success">Add an article</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
 
+        <div class="row">
+            <div class="card col" style="width: 18rem;">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">Quotes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'quotes' %}" class="btn btn-primary"> Read </a>
+                    <a href="{% url 'addQuote' %}" class="btn btn-success"> Add an quote </a>
+                </div>
+            </div>
+        </div>
     </div>
     
 {% endblock %}

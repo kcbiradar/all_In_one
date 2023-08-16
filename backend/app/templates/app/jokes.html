@@ -1,5 +1,11 @@
 {% extends 'app/layout.html' %}
 
 {% block body %}
-    <h1>This is Jokes page</h1>
+    <div class="container">
+        <h1>This is Jokes page</h1>
+
+        {% for joke in jokes %}
+            <li>{{joke}}</li>
+        {% endfor %}
+    </div>
 {% endblock %}
